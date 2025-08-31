@@ -42,6 +42,8 @@ Caso você conclua todas as aulas e desafios, receberá este certificado de conc
 
 - Teste a primeira aula: https://erickwendel.github.io/semana-javascript-expert09/aula01-criando-llmstxt
 - Teste a segunda aula: https://erickwendel.github.io/semana-javascript-expert09/aula02-integrando-ai
+- Teste a segunda aula: https://erickwendel.github.io/semana-javascript-expert09/aula03-recebendo-como-stream
+- Teste a segunda aula: https://erickwendel.github.io/semana-javascript-expert09/aula04-abortando-requisicoes
 
 ---
 
@@ -58,7 +60,7 @@ Caso você conclua todas as aulas e desafios, receberá este certificado de conc
 - [Embutindo o Widget em Outro Site](#-embutindo-o-widget-em-outro-site)
 - [Customização](#-customização)
 - [Limitações e Avisos](#-limitações-e-avisos)
-- [Roadmap / Próximos Passos](#-roadmap--próximos-passos)
+- [Desafios para você](#-desafios)
 - [FAQ](#-faq)
 - [Contribuição](#-contribuição)
 - [EW Academy](#-ew-academy)
@@ -154,6 +156,23 @@ Conteúdo inicial / comportamento:
 
 - `systemPrompt.txt`: instruções de sistema para o modelo.
 - `chatbot-config.json`: metadados (nome, avatar, cores, welcomeBubble etc).
+
+## 🎨 Desafios
+
+1 -  Baixar o modelo mediante à autorização dos usuários
+
+- Pergunte ao usuário se ele deseja baixar o modelo
+    - verificar que se caso o modelo não esteja disponível na máquina do cliente, para que no chat, ele clique em um botão, inicie o download e então o notifique que acabou
+
+2 - Tornar disponível em outros navegadores
+
+- Se o cliente não está no Google Chrome, você pode trocar o modelo, usar o Hugging face ou até o modelo do Gemma do google e seguir o mesmo processo, perguntando se ele deseja baixar o modelo e mais
+
+3 - Tornar disponível em computadores incompatíveis / com menos poder de processamento
+
+- Implementar um backend para consumir as APIs gratuitas de AI, os modelos menores do Gemma do Google para responder aos usuários
+    -  Recomendação é usar o [OpenRouter](https://openrouter.ai/), um agregador de modelos de IA que funcionam na nuvem. Lá lá eles deixam você usar APIs de forma gratuita, com alguns limites mas pelos meus testes funciona muito bem.
+    - Dar uma olhada na [documentação](https://openrouter.ai/docs/community/open-ai-sdk) para ver como integrar com o Node.js e garantir que suas chaves não vão ficar expostas no frontend.
 
 ## ⚠️ Limitações e Avisos
 
